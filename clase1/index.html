@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="cuadro">
+        <div class="bolas-arriba"></div>
+        <div class="bolas-arriba"></div>
+        <h1>D<span>JUNIOR</span></h1>
+        <div class="bolas-abajo"></div>
+        <div class="bolas-abajo"></div>
+    </div>
+
+
+    <style>
+        .cuadro{
+            filter: contrast(20);
+            background: #fff;
+        }
+
+        h1{
+            font-size: 5rem;
+            filter: blur(1.5px);
+        }
+
+        h1 > span{
+            color: #900;
+        }
+
+        .bolas-arriba{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: #900;
+            border-radius: 50%;
+            margin: 30px;
+            animation: abajo 2s alternate infinite;
+            filter: blur(20px);
+        }
+
+        .bolas-abajo{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: #900;
+            border-radius: 50%;
+            margin: 10px;
+            animation: arriba 2s alternate infinite;
+            filter: blur(20px);
+        }
+
+
+        @keyframes arriba{
+            0%{
+                transform: translateY(-300);
+            }
+            100%{
+                transform: translateY(100px);
+            }
+        }
+
+        @keyframes abajo{
+            0%{
+                transform: translateY(200);
+            }
+            100%{
+                transform: translateY(300px);
+            }
+        }
+
+    </style>
+
+</body>
+</html>
